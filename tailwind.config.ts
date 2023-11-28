@@ -13,36 +13,55 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        primary: "#eb644c",
+        secondary: "#263244",
+        success: "#4fd9a9",
+        "success-light": "#d0f5e8",
+        error: "#e35263",
+        warning: "#ffb914",
+        info: "#4fc4d9",
+        "button-primary": "#eb644c",
+        "button-pressed": "#263244",
+        "button-disabled": "#f9cfc8",
+        "button-destructive": "#e35263",
+        "text-primary": "#263244",
+        "text-secondary": "#737c89",
+        "text-tertiary": "#c0c5ce",
+        "text-quaternery": "#e6e8eb",
+        "text-white": "#fff",
+        "text-white-85": "#ffffff85",
+        "menu-background": "rgba(30,14,12,.4)",
+        "overlay-background": "#f6f7f8",
+        "primary-opacity-005": "hsla(9,80%,61%,.05)",
+        "bg-investors": "#181f2b",
+      },
+      screens: {
+        xs: "390px",
+        sm: "567px",
+        md: "744px",
+        lg: "992px",
+        xl: "1200px",
+        "2xl": "1600px",
+        "3xl": "1920px",
+      },
+      keyframes: {
+        "fade-in-keyframe": {
+          "0%": { opacity: "0" },
+          "33%": { opacity: "0", transform: "translateY(3.6rem)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+      animation: {
+        "fade-in": "fade-in-keyframe 1s ease-in-out",
+      },
     },
   },
   plugins: [],
 }
 export default config
 
-// --max-width: 1100px;
-// --color-primary: #eb644c;
-// --color-primary-rgb: 235,100,76;
-// --color-secondary: #263244;
-// --color-success: #4fd9a9;
-// --color-success-light: #d0f5e8;
-// --color-error: #e35263;
-// --color-warning: #ffb914;
-// --color-info: #4fc4d9;
-// --color-button-primary: #eb644c;
-// --color-button-pressed: #263244;
-// --color-button-disabled: #f9cfc8;
-// --color-button-destructive: #e35263;
-// --color-text-primary: #263244;
-// --color-text-secondary: #737c89;
-// --color-text-tertiary: #c0c5ce;
-// --color-text-quaternery: #e6e8eb;
-// --color-text-white: #fff;
-// --color-text-white-85: #ffffff85;
-// --color-menu-background: rgba(30,14,12,.4);
-// --color-overlay-background: #f6f7f8;
-// --color-primary-opacity-005: hsla(9,80%,61%,.05);
-// --color-bg-investors: #181f2b;
-// --z-0: 0;
+// --z-0: 0",
 // --z-1: 100;
 // --z-2: 200;
 // --z-3: 300;
