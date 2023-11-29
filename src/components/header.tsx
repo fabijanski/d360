@@ -10,7 +10,7 @@ import { WAITLIST_JOIN_PATH_ID, WAITLIST_STATUS_PATH_ID } from "@/constants"
 import { useOverlay } from "@/hooks/useOverlay"
 
 export const Header = () => {
-  const router = useRouter()
+  const { push } = useRouter()
   const pathname = usePathname()
   const overlayType = useOverlay()
 
@@ -50,11 +50,7 @@ export const Header = () => {
                   <Link href={WAITLIST_STATUS_PATH_ID}>Waitlist Status</Link>
                 </li>
                 <li className="ml-[6rem]">
-                  <Button
-                    onClick={() =>
-                      router.push(`${pathname}${WAITLIST_JOIN_PATH_ID}`)
-                    }
-                  >
+                  <Button onClick={() => push(WAITLIST_JOIN_PATH_ID)}>
                     Join the Waitlist
                   </Button>
                 </li>
