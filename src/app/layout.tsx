@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import { Header } from "@/components/header"
+import { Container } from "../components/container"
 
 export const metadata: Metadata = {
   title: "D360 Bank – A bank with you in mind",
@@ -17,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true}>
         <Header />
-        <main>{children}</main>
+        <Container>{children}</Container>
       </body>
     </html>
   )
