@@ -51,29 +51,43 @@ const config: Config = {
           "33%": { opacity: "0", transform: "translateY(3.6rem)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        "fade-in-overlay-keyframe": {
+          "0%": {
+            overflow: "hidden",
+            opacity: "0",
+            height: "0",
+          },
+          "100%": {
+            opacity: "1",
+            height: "100vh",
+          },
+        },
+        "unblur-keyframe": {
+          "0%": {
+            filter: "blur(3rem)",
+          },
+          "100%": {
+            filter: "blur(0)",
+          },
+        },
+        "phone-diagonal-move-keyframe": {
+          "0%": {
+            transform: "translate(-10%)",
+          },
+          "100%": {
+            transform: "translate(calc(-10% + 3rem),3rem)",
+          },
+        },
       },
       animation: {
-        "fade-in": "fade-in-keyframe 1s ease-in-out",
+        "fade-in": "fade-in-keyframe 1s",
+        "fade-in-overlay-keyframe": "fade-in-overlay-keyframe 1s",
+        "unblur-keyframe": "unblur-keyframe 1s",
+        "phone-diagonal-move-keyframe":
+          "phone-diagonal-move-keyframe 5s linear infinite alternate",
       },
     },
   },
   plugins: [],
 }
 export default config
-
-// --z-0: 0",
-// --z-1: 100;
-// --z-2: 200;
-// --z-3: 300;
-// --z-4: 400;
-// --z-5: 500;
-// --z-6: 600;
-// --z-7: 700;
-// --z-8: 800;
-// --z-9: 900;
-// --z-10: 1000;
-// --z-11: 1100;
-// --z-12: 1200;
-// --z-13: 1300;
-// --z-14: 1400;
-// --z-15: 1500;
