@@ -39,8 +39,8 @@ export const Header = () => {
           </div>
         ) : null}
 
-        <nav className="hidden w-full lg:flex transition-all duration-200 ease-in-out">
-          <ul className="list-none w-full flex items-center">
+        <nav className="hidden w-full transition-all duration-200 ease-in-out lg:flex">
+          <ul className="flex items-center w-full list-none">
             <li className="ml-[6rem]">
               <Link href="/about-us">About Us</Link>
             </li>

@@ -89,20 +89,21 @@ const Light2 = () => {
   )
 }
 
-export default function Animation() {
+export const TextAnimated = () => {
   return (
-    <section className="">
-      <Canvas
-        style={{ height: "800px" }}
-        camera={{
-          position: [-0.1, 0.1, 2.5],
-        }}
-      >
-        <Light1 />
-        <Light2 />
-        <color attach="background" args={["white"]} />
-        <Scene />
-      </Canvas>
-    </section>
+    <Canvas
+      camera={{
+        position: [-0.1, 0.1, 2.5],
+      }}
+      style={{
+        display: "block",
+        width: "100%",
+        height: "100%",
+      }}
+    >
+      <Light1 />
+      <Light2 />
+      <Scene />
+    </Canvas>
   )
 }
