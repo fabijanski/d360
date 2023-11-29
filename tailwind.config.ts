@@ -46,9 +46,19 @@ const config: Config = {
         "3xl": "1920px",
       },
       keyframes: {
-        "fade-in-keyframe": {
+        "fade-in-short-keyframe": {
           "0%": { opacity: "0" },
           "33%": { opacity: "0", transform: "translateY(3.6rem)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-in-keyframe": {
+          "0%": { opacity: "0" },
+          "33%": { opacity: "0", transform: "translateY(15rem)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-in-long-keyframe": {
+          "0%": { opacity: "0" },
+          "33%": { opacity: "0", transform: "translateY(25rem)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
         "fade-in-overlay-keyframe": {
@@ -80,10 +90,12 @@ const config: Config = {
         },
       },
       animation: {
-        "fade-in": "fade-in-keyframe 1s",
-        "fade-in-overlay-keyframe": "fade-in-overlay-keyframe 1s",
-        "unblur-keyframe": "unblur-keyframe 1s",
-        "phone-diagonal-move-keyframe":
+        "fade-in-short": "fade-in-short-keyframe 1s",
+        "fade-in": "fade-in-keyframe 2s",
+        "fade-in-long": "fade-in-keyframe 2s",
+        "fade-in-overlay": "fade-in-overlay-keyframe 1s",
+        unblur: "unblur-keyframe 1s",
+        "phone-diagonal-move":
           "phone-diagonal-move-keyframe 5s linear infinite alternate",
       },
     },

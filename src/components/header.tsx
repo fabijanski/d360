@@ -12,7 +12,7 @@ export const Header = () => {
 
   return (
     <header className="fixed w-full max-w-[100vw] top-0 left-0 right-0 py-[1.2rem] md:py-[1.6rem] px-0 transition-all ease-in-out backdrop-blur-[2rem] z-20">
-      <div className="mx-[1.5rem] md:mx-auto md:w-[calc(100%-8rem)] md:max-w-[120rem] 2xl:max-w-[132.4rem] 3xl:w-[165rem] 3xl:max-w-[165rem] flex justify-between items-center animate-fade-in">
+      <div className="mx-[1.5rem] md:mx-auto md:w-[calc(100%-8rem)] md:max-w-[120rem] 2xl:max-w-[132.4rem] 3xl:w-[165rem] 3xl:max-w-[165rem] flex justify-between items-center animate-fade-in-short">
         <Link href="/" className="">
           <Image
             src={Logo}
