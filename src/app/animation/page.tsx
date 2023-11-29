@@ -17,7 +17,7 @@ import {
   MathUtils,
   Mesh,
 } from "three"
-const fontUrl = "/fonts/Lato_Regular.json"
+const fontUrl = "/fonts/Lato.json"
 
 const Scene = () => {
   const mesh = useRef<Mesh>(null!)
