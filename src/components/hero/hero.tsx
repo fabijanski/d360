@@ -16,9 +16,9 @@ export const Hero: React.FC = () => {
 
   return (
     <>
-      <div className="flex justify-center flex-col-reverse items-center h-full w-full">
-        <div className="flex flex-col justify-center mt-auto w-full items-center">
-          <h1 className="max-w-[30rem] mx-auto mb-[7rem] text-center h-auto transition-opacity duration-[600] ease-in-out opacity-100 animate-fade-in">
+      <div className="flex justify-center flex-col-reverse items-center lg:flex-row lg:justify-between h-full w-full lg:max-w-[120rem] lg:mx-auto 2xl:w-full 2xl:max-w-[132.4rem] 3xl:max-w-[165rem]">
+        <div className="flex flex-col justify-center mt-auto w-full items-center lg:m-0 lg:items-start transition-opacity duration-[600ms] ease-in-out opacity-100">
+          <h1 className="max-w-[30rem] mx-auto mb-[7rem] text-center h-auto animate-fade-in text-[3.6rem] leading-[1.2] font-bold sm:mb-[3.25rem] sm:max-w-[60rem] md:text-[8rem] md:mb-[5.25rem] lg:text-start lg:mx-0 xl:text-[10rem] z-10">
             {data.title}
           </h1>
           <Button
@@ -30,13 +30,13 @@ export const Hero: React.FC = () => {
           <Button
             onClick={() => router.push(`${pathname}#waitlist-status`)}
             variant="secondary"
-            className="animate-fade-in-long"
+            className="animate-fade-in-long lg:hidden"
           >
             Waitlist Status
           </Button>
         </div>
-        <div className="mt-auto animate-fade-in">
-          <div className="max-h-[37vh] h-[62rem] w-[30rem] transition-all duration-200 ease-in-out animate-unblur">
+        <div className="mt-auto lg:mt-0">
+          <div className="max-h-[37vh] h-[62rem] w-[30rem] lg:w-[40rem] lg:max-h-[60vh] transition-opacity duration-[600ms] ease-in-out opacity-100 animate-fade-in">
             <div className="relative w-full h-full">
               <Image
                 src={phone}

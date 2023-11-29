@@ -94,9 +94,9 @@ const config: Config = {
         },
       },
       animation: {
-        "fade-in-short": "fade-in-short-keyframe 1s",
+        "fade-in-short": "fade-in-short-keyframe 2s",
         "fade-in": "fade-in-keyframe 2s",
-        "fade-in-long": "fade-in-keyframe 2s",
+        "fade-in-long": "fade-in-long-keyframe 2s",
         "fade-in-overlay": "fade-in-overlay-keyframe 1s",
         unblur: "unblur-keyframe 1s",
         "phone-diagonal-move":
