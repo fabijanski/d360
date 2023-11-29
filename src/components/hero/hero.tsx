@@ -6,14 +6,12 @@ import phone from "@/assets/images/phone.webp"
 import card from "@/assets/images/card.webp"
 import { Button } from "@/components/button"
 import { useRouter } from "next/navigation"
-import { usePathname } from "next/navigation"
 
 import React from "react"
 import { WAITLIST_JOIN_PATH_ID, WAITLIST_STATUS_PATH_ID } from "@/constants"
 
 export const Hero: React.FC = () => {
   const { push } = useRouter()
-  const pathname = usePathname()
 
   return (
     <>
@@ -23,13 +21,13 @@ export const Hero: React.FC = () => {
             {data.title}
           </h1>
           <Button
-            onClick={() => push(`${pathname}${WAITLIST_JOIN_PATH_ID}`)}
+            onClick={() => push(WAITLIST_JOIN_PATH_ID)}
             className="animate-fade-in-long w-full sm:max-w-[35rem]"
           >
             Join the Waitlist
           </Button>
           <Button
-            onClick={() => push(`${pathname}${WAITLIST_STATUS_PATH_ID}`)}
+            onClick={() => push(WAITLIST_STATUS_PATH_ID)}
             variant="secondary"
             className="animate-fade-in-long lg:hidden"
           >

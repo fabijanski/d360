@@ -3,19 +3,18 @@
 import { useOverlay } from "@/hooks/useOverlay"
 import Image from "next/image"
 import close from "@/assets/images/close.svg"
-import { usePathname, useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { TextAnimated } from "./textAnimated"
 
 export const Container = ({ children }: { children: React.ReactNode }) => {
   const overlayType = useOverlay()
 
-  const pathname = usePathname()
-  const { push } = useRouter()
+  const { replace } = useRouter()
 
   return (
     <main>
       {overlayType ? (
-        <div className="fixed w-screen h-screen overflow-hidden overflow-y-auto bg-overlay-background z-20 transition-all duration-1000 ease-in-out animate-fade-in-overlay">
+        <div className="fixed z-20 w-screen h-screen overflow-hidden overflow-y-auto transition-all duration-1000 ease-in-out bg-overlay-background animate-fade-in-overlay">
           <div className="hidden w-full h-full xl:block">
             <TextAnimated />
           </div>
@@ -26,7 +25,7 @@ export const Container = ({ children }: { children: React.ReactNode }) => {
           </div>
           <div
             className="fixed top-[8rem] md:top-[12rem] p-[1rem] right-[5%] cursor-pointer"
-            onClick={() => push(pathname)}
+            onClick={() => replace("")}
           >
             <Image
               src={close}

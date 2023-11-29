@@ -5,13 +5,12 @@ import LogoWhite from "@/assets/images/logo-white.svg"
 import LogoColor from "@/assets/images/logo-color.svg"
 import Hamburger from "@/assets/images/hamburger.svg"
 import { Button } from "./button"
-import { usePathname, useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { WAITLIST_JOIN_PATH_ID, WAITLIST_STATUS_PATH_ID } from "@/constants"
 import { useOverlay } from "@/hooks/useOverlay"
 
 export const Header = () => {
   const { push } = useRouter()
-  const pathname = usePathname()
   const overlayType = useOverlay()
 
   const extraClassNameHeader = !!overlayType ? " text-secondary" : ""
