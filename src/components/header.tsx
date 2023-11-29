@@ -29,13 +29,16 @@ export const Header = () => {
             priority
           />
         </Link>
-        <div className="py-[0.5rem] lg:hidden cursor-pointer">
-          <Image
-            src={Hamburger}
-            alt="Hamburger Menu"
-            className="h-[2rem] w-[2rem] cursor-pointer"
-          />
-        </div>
+        {!overlayType ? (
+          <div className="py-[0.5rem] lg:hidden cursor-pointer">
+            <Image
+              src={Hamburger}
+              alt="Hamburger Menu"
+              className="h-[2rem] w-[2rem] cursor-pointer"
+            />
+          </div>
+        ) : null}
+
         <nav className="hidden w-full lg:flex transition-all duration-200 ease-in-out">
           <ul className="list-none w-full flex items-center">
             <li className="ml-[6rem]">

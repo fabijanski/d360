@@ -12,7 +12,7 @@ import React from "react"
 import { WAITLIST_JOIN_PATH_ID, WAITLIST_STATUS_PATH_ID } from "@/constants"
 
 export const Hero: React.FC = () => {
-  const router = useRouter()
+  const { push } = useRouter()
   const pathname = usePathname()
 
   return (
@@ -23,13 +23,13 @@ export const Hero: React.FC = () => {
             {data.title}
           </h1>
           <Button
-            onClick={() => router.push(`${pathname}${WAITLIST_JOIN_PATH_ID}`)}
+            onClick={() => push(`${pathname}${WAITLIST_JOIN_PATH_ID}`)}
             className="animate-fade-in-long w-full sm:max-w-[35rem]"
           >
             Join the Waitlist
           </Button>
           <Button
-            onClick={() => router.push(`${pathname}${WAITLIST_STATUS_PATH_ID}`)}
+            onClick={() => push(`${pathname}${WAITLIST_STATUS_PATH_ID}`)}
             variant="secondary"
             className="animate-fade-in-long lg:hidden"
           >
