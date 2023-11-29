@@ -17,7 +17,9 @@ import {
   MathUtils,
   Mesh,
 } from "three"
-const fontUrl = "/fonts/Lato.json"
+import config from "../../next.config"
+
+const fontUrl = `${config.basePath}/fonts/Lato.json`
 
 const Scene = () => {
   const mesh = useRef<Mesh>(null!)

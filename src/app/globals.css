@@ -34,5 +34,5 @@ video {
 
 @font-face {
   font-family: "Lato";
-  src: url("/fonts/Lato.woff2") format("woff2");
+  src: url("../assets/fonts/Lato.woff2") format("woff2");
 }
