@@ -15,13 +15,8 @@ export const Container = ({ children }: { children: React.ReactNode }) => {
     <main>
       {overlayType ? (
         <div className="fixed z-20 w-screen h-screen overflow-hidden overflow-y-auto transition-all duration-1000 ease-in-out bg-overlay-background animate-fade-in-overlay">
-          <div className="hidden w-full h-full xl:block">
+          <div className="w-full h-full">
             <TextAnimated />
-          </div>
-          <div className="flex items-center justify-center w-full h-full xl:hidden">
-            <p className="text-primary text-[4rem] text-center">
-              the animation is hidden on small screens
-            </p>
           </div>
           <div
             className="fixed top-[8rem] md:top-[12rem] p-[1rem] right-[5%] cursor-pointer"
